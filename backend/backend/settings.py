@@ -132,6 +132,6 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "https://predictpulse.netlify.app",
+    "https://predict-pulse.onrender.com",
     "https://predictpulse.onrender.com",
 ]
