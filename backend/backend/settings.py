@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1yl=j5nq0(01s3x0ptx#8mm0hq4yfs$df)s-es$oxt55_%@z^3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["predictpulse.onrender.com"]
 
 
 # Application definition
