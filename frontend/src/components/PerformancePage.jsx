@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-const API_URL = process.env.REACT_APP_API_URL 
+// const API_URL = process.env.REACT_APP_API_URL 
 
 function readPredictionHistory() {
   try {
@@ -28,7 +28,7 @@ function PerformancePage() {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/api/health/`)
+      .get("https://predictpulse.onrender.com/api/health/")
       .then((r) => setStatus(r.data))
       .catch((e) => setStatus(null));
   }, []);

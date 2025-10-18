@@ -2,7 +2,7 @@ import axios from "axios";
 import { motion } from "motion/react";
 import { useState, useRef } from "react";
 
-const API_URL = process.env.REACT_APP_API_URL 
+// const API_URL = process.env.REACT_APP_API_URL 
 function UploadPage() {
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -46,7 +46,7 @@ function UploadPage() {
 
     try {
       const res = await axios.post(
-        `${API_URL}/api/upload-csv/`,
+        "https://predictpulse.onrender.com/api/upload-csv/",
         form,
         {
           headers: { "Content-Type": "multipart/form-data" },
