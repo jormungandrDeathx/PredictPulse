@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-
+const API_URL = process.env.REACT_APP_API_URL 
 function PredictionForm() {
   const [values, setValues] = useState({
     age: "",
@@ -42,7 +42,7 @@ function PredictionForm() {
     try {
       setLoading(true);
       setResult(null);
-      const res = await axios.post("http://127.0.0.1:8000/api/predict/", {
+      const res = await axios.post(`${API_URL}/api/predict/`, {
         features,
       });
       setResult(res.data);

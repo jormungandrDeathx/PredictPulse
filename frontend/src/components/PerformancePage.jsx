@@ -9,6 +9,8 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
+const API_URL = process.env.REACT_APP_API_URL 
+
 function readPredictionHistory() {
   try {
     const raw = localStorage.getItem("prediction_history");
@@ -26,7 +28,7 @@ function PerformancePage() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/health/")
+      .get(`${API_URL}/api/health/`)
       .then((r) => setStatus(r.data))
       .catch((e) => setStatus(null));
   }, []);
